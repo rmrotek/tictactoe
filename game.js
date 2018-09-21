@@ -38,6 +38,7 @@ window.addEventListener("click", function(event) {
     clickedElement.classList.add("o");
     clickedElement.innerText = "O";
     clickedElement.style.background = 'rgba(0,0,0,0)';
+    movesLeft--;
     playerturn = 1;
   }
   if (
@@ -48,7 +49,7 @@ window.addEventListener("click", function(event) {
     clickedElement.classList.add("x");
     clickedElement.innerText = "X";
     clickedElement.style.background = 'rgba(0,0,0,0)';
-
+    movesLeft--;
     playerturn = 0;
   }
 });
@@ -115,6 +116,11 @@ var intervalTrigger = setInterval(function() {
     gameEnd = true;
     clearInterval(intervalTrigger);
     return alert(playerTwoWin);
+  }
+
+  if(movesLeft === 0) {
+    clearInterval(intervalTrigger);
+    return alert('DRAAAAAAAAAAAAAAAW');
   }
 
   console.log("no winner yet eloel, keep trying");
