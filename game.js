@@ -1,3 +1,7 @@
+
+// DONT DO THIS AT HOME KIDS
+
+
 var playerturn = 0;
 var pos11 = document.querySelector(".pos11");
 var pos12 = document.querySelector(".pos12");
