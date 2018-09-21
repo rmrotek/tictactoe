@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #000;
+    color: white;
 }
 
 #app {
@@ -9,6 +10,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+span{
+    font-size: 50px;
 }
 
 .board {
@@ -35,7 +40,7 @@ body {
 
 .somefunshit {
     position: relative;
-    margin: 200px auto 0;
+    margin: 150px;
     width: 150px;
     height: 150px;
     /* background: linear-gradient(0deg, #000, #262626) */

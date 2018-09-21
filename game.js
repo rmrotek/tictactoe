@@ -1,6 +1,4 @@
-
 // DONT DO THIS AT HOME KIDS
-
 
 var playerturn = 0;
 var pos11 = document.querySelector(".pos11");
@@ -12,6 +10,7 @@ var pos23 = document.querySelector(".pos23");
 var pos31 = document.querySelector(".pos31");
 var pos32 = document.querySelector(".pos32");
 var pos33 = document.querySelector(".pos33");
+var span = document.querySelector("span");
 var gameEnd = false;
 var movesLeft = 9;
 
@@ -37,7 +36,8 @@ window.addEventListener("click", function(event) {
   ) {
     clickedElement.classList.add("o");
     clickedElement.innerText = "O";
-    clickedElement.style.background = 'rgba(0,0,0,0)';
+    clickedElement.style.background = "rgba(0,0,0,0)";
+    span.innerText = "X";
     movesLeft--;
     playerturn = 1;
   }
@@ -48,7 +48,8 @@ window.addEventListener("click", function(event) {
   ) {
     clickedElement.classList.add("x");
     clickedElement.innerText = "X";
-    clickedElement.style.background = 'rgba(0,0,0,0)';
+    clickedElement.style.background = "rgba(0,0,0,0)";
+    span.innerText = "O";
     movesLeft--;
     playerturn = 0;
   }
@@ -81,7 +82,6 @@ var intervalTrigger = setInterval(function() {
       pos22.classList.contains("x") &&
       pos31.classList.contains("x"))
   ) {
-    
     gameEnd = true;
     clearInterval(intervalTrigger);
     return alert(playerOneWin);
@@ -112,15 +112,14 @@ var intervalTrigger = setInterval(function() {
       pos22.classList.contains("o") &&
       pos31.classList.contains("o"))
   ) {
-    
     gameEnd = true;
     clearInterval(intervalTrigger);
     return alert(playerTwoWin);
   }
 
-  if(movesLeft === 0) {
+  if (movesLeft === 0) {
     clearInterval(intervalTrigger);
-    return alert('DRAAAAAAAAAAAAAAAW');
+    return alert("DRAAAAAAAAAAAAAAAW");
   }
 
   console.log("no winner yet eloel, keep trying");
