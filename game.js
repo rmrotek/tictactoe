@@ -8,8 +8,9 @@ var pos23 = document.querySelector(".pos23");
 var pos31 = document.querySelector(".pos31");
 var pos32 = document.querySelector(".pos32");
 var pos33 = document.querySelector(".pos33");
-var isX = document.querySelector(".x");
 
+// classList.contains("x");
+// classList.contains("o");
 
 var playerOneWin = "player X wins";
 var playerTwoWin = "player O wins";
@@ -35,6 +36,8 @@ window.addEventListener("click", function(event) {
     clickedElement.classList.add("x");
     playerturn = 0;
   }
-
-
 });
+
+setInterval(function() {
+  console.log("no winner yet eloel");
+}, 500);
