@@ -38,6 +38,21 @@ window.addEventListener("click", function(event) {
   }
 });
 
-setInterval(function() {
+var intervalTrigger = setInterval(function() {
+  if (
+    (pos11.classList.contains("x") &&
+      pos12.classList.contains("x") &&
+      pos13.classList.contains("x")) ||
+    (pos21.classList.contains("x") &&
+      pos22.classList.contains("x") &&
+      pos23.classList.contains("x")) ||
+    (pos31.classList.contains("x") &&
+      pos32.classList.contains("x") &&
+      pos33.classList.contains("x"))
+  ) {
+    clearInterval(intervalTrigger);
+    return console.log(playerOneWin);
+  }
+  
   console.log("no winner yet eloel");
 }, 500);
