@@ -76,7 +76,7 @@ var intervalTrigger = setInterval(function() {
     
     gameEnd = true;
     clearInterval(intervalTrigger);
-    return console.log(playerOneWin);
+    return alert(playerOneWin);
   }
   if (
     (pos11.classList.contains("o") &&
