@@ -15,7 +15,6 @@ body {
     display: grid;
     grid-template-columns: 50px 50px 50px;
     grid-template-rows: 50px 50px 50px;
-    background: white;
 }
 
 .field {
@@ -25,30 +24,29 @@ body {
     text-align: center;
     line-height: 50px;
     user-select: none;
+    background: white;
+    color: black;
+    font-weight: bolder;
 }
 
-.x {
-    background: rgba(133, 236, 85, 0.5);
-}
+.x {}
 
-.o {
-    background: rgba(255, 0, 0, 0.288);
-}
+.o {}
 
 .somefunshit {
     position: relative;
     margin: 200px auto 0;
     width: 150px;
     height: 150px;
-    background: linear-gradient(0deg, #000, #262626)
+    /* background: linear-gradient(0deg, #000, #262626) */
 }
-.somefunshit:before,
-.somefunshit:after {
+
+.somefunshit:before, .somefunshit:after {
     content: '';
     position: absolute;
     top: -2px;
     left: -2px;
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00,#ff0000, #fb0094, #0000ff, #00ff00, #ffff00,#ff0000);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
@@ -59,6 +57,7 @@ body {
 .somefunshit:after {
     filter: blur(20px)
 }
+
 @keyframes animate {
     0% {
         background-position: 0 0;

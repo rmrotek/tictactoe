@@ -13,6 +13,7 @@ var pos31 = document.querySelector(".pos31");
 var pos32 = document.querySelector(".pos32");
 var pos33 = document.querySelector(".pos33");
 var gameEnd = false;
+var movesLeft = 9;
 
 // classList.contains("x");
 // classList.contains("o");
@@ -36,6 +37,7 @@ window.addEventListener("click", function(event) {
   ) {
     clickedElement.classList.add("o");
     clickedElement.innerText = "O";
+    clickedElement.style.background = 'rgba(0,0,0,0)';
     playerturn = 1;
   }
   if (
@@ -45,6 +47,7 @@ window.addEventListener("click", function(event) {
   ) {
     clickedElement.classList.add("x");
     clickedElement.innerText = "X";
+    clickedElement.style.background = 'rgba(0,0,0,0)';
 
     playerturn = 0;
   }
