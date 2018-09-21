@@ -21,13 +21,17 @@ window.addEventListener("click", function(event) {
 
   // 0 = o, 1 = x
 
+  if (gameEnd === true) {
+    return;
+  }
+
   if (
     clickedElement.classList.contains("field") &&
     !clickedElement.classList.contains("x") &&
     playerturn === 0
   ) {
     clickedElement.classList.add("o");
-    clickedElement.innerText= 'O'
+    clickedElement.innerText = "O";
     playerturn = 1;
   }
   if (
@@ -36,7 +40,7 @@ window.addEventListener("click", function(event) {
     playerturn === 1
   ) {
     clickedElement.classList.add("x");
-    clickedElement.innerText= 'X'
+    clickedElement.innerText = "X";
 
     playerturn = 0;
   }
@@ -69,9 +73,9 @@ var intervalTrigger = setInterval(function() {
       pos22.classList.contains("x") &&
       pos31.classList.contains("x"))
   ) {
-    clearInterval(intervalTrigger);
+    
     gameEnd = true;
-
+    clearInterval(intervalTrigger);
     return console.log(playerOneWin);
   }
   if (
@@ -100,9 +104,9 @@ var intervalTrigger = setInterval(function() {
       pos22.classList.contains("o") &&
       pos31.classList.contains("o"))
   ) {
-    clearInterval(intervalTrigger);
+    
     gameEnd = true;
-
+    clearInterval(intervalTrigger);
     return alert(playerTwoWin);
   }
 
